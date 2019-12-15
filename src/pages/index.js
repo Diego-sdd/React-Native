@@ -1,8 +1,11 @@
 
 import React, { Component } from 'react';
-import { Text, View, StyleSheet } from 'react-native';
+import { Text, View, StyleSheet, Alert, TextInput, Platform, TouchableOpacity, ListView, ActivityIndicator } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import {  Button,  } from 'react-native-elements';
+
+
+
 
 export default class HelloWorldApp extends Component {
     render() {

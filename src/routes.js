@@ -5,14 +5,22 @@ import { createMaterialBottomTabNavigator } from 'react-navigation-material-bott
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 import Login from './pages/login.js';
+import UsuariosCadastrado from './pages/usuariosCadastrado.js';
+// import Index from './pages/index.js';
 
-import Index from './pages/index.js';
-
-
+import CadastroUsuario from './pages/cadastroUsuario.js';
 Icon.loadFont();
 
 const mainNavigation = createMaterialBottomTabNavigator(
   {
+    CadastroUsuario: {
+      screen: CadastroUsuario,
+      navigationOptions: () => ({
+        tabBarIcon: ({ focused }) => (
+          <Icon name="lock" size={20} color={focused ? '#fff' : '#ddd'} />
+        ),
+      }),
+    },
     Login: {
       screen: Login,
       navigationOptions: () => ({
@@ -21,8 +29,8 @@ const mainNavigation = createMaterialBottomTabNavigator(
         ),
       }),
     },
-    Index: {
-      screen: Index,
+    U: {
+      screen: UsuariosCadastrado,
       navigationOptions: () => ({
         tabBarIcon: ({ focused }) => (
           <Icon name="lock" size={20} color={focused ? '#fff' : '#ddd'} />
